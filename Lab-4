@@ -1,0 +1,145 @@
+Lab -4
+23BEC7319
+
+
+//1)Write a java programs to implement single inheritance where the parent class defines a method calculate().and the child class overrides it to performa a specifie mathematical operation.
+
+Code : 
+class Calculate {
+    void calculate(int a, int b) {
+        System.out.println("Calculation not in base class");
+    }
+}
+
+class Add extends Calculate {
+    @Override
+    void calculate(int a, int b) {
+        int c = a + b;
+        System.out.println("Addition: " + c);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Add a = new Add();
+        a.calculate(12, 90); 
+    }
+}
+
+Output;
+
+Addition: 102
+
+
+//--------------------
+
+
+//2)Write a Java program to create a Calculator class with overloaded methods named calculate() that perform:
+. Addition of two mumbers
+Subtraction of two mambers
+Multiplication of two numbers
+Division of two numbers.
+
+Code:
+
+public class Calculator {
+    public double calculate(double a, double b) {
+        return a + b;
+    }
+    public double calculate(double a, double b, String operation) {
+        switch (operation.toLowerCase()) {
+            case "subtract":
+                return a - b;
+            case "multiply":
+                return a * b;
+            case "divide":
+                if (b != 0) {
+                    return a / b;
+                } else {
+                    throw new ArithmeticException("Division by zero is not allowed.");
+                }
+            default:
+                throw new IllegalArgumentException("Invalid operation: " + operation);
+        }
+    }
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+
+        double a = 10;
+        double b = 5;
+
+        System.out.println("Addition: " + calc.calculate(a, b));
+        System.out.println("Subtraction: " + calc.calculate(a, b, "subtract"));
+        System.out.println("Multiplication: " + calc.calculate(a, b, "multiply"));
+        System.out.println("Division: " + calc.calculate(a, b, "divide"));
+    }
+}
+
+Output;
+Addition: 15.0
+Subtraction: 5.0
+Multiplication: 50.0
+Division: 2.0.
+
+//---------------------------
+
+
+//3)Write a Java program with a Calculator class having multiple constructors:
+One that takes no arguments and sets values to 0
+One that takes two arguments and performs addition immediately
+One that takes these argest two suchers and a string for the operation to performs.
+
+Code:
+
+public class Calculator {
+    double num1, num2, result;
+    Calculator() {
+        num1 = 0;
+        num2 = 0;
+        result = 0;
+        System.out.println("No-arg constructor: result = " + result);
+    }
+    Calculator(double a, double b) {
+        num1 = a;
+        num2 = b;
+        result = a + b;
+        System.out.println("Addition: " + a + " + " + b + " = " + result);
+    }
+    Calculator(double a, double b, String op) {
+        num1 = a;
+        num2 = b;
+
+        if (op.equals("+"))
+            result = a + b;
+        else if (op.equals("-"))
+            result = a - b;
+        else if (op.equals("*"))
+            result = a * b;
+        else if (op.equals("/")) {
+            if (b != 0)
+                result = a / b;
+            else {
+                System.out.println("Cannot divide by zero");
+                result = 0;
+            }
+        } else {
+            System.out.println("Unknown operation");
+            result = 0;
+        }
+
+        System.out.println("Operation: " + a + " " + op + " " + b + " = " + result);
+    }
+    public static void main(String[] args) {
+        Calculator c1 = new Calculator();
+        Calculator c2 = new Calculator(10, 5);        
+        Calculator c3 = new Calculator(20, 4, "*");  
+        Calculator c4 = new Calculator(10, 0, "/");
+    }
+}
+
+Output;
+No-arg constructor: result = 0.0
+Addition: 10.0 + 5.0 = 15.0
+Operation: 20.0 * 4.0 = 80.0
+Cannot divide by zero
+Operation: 10.0 / 0.0 = 0.0
