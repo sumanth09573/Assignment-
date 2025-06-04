@@ -1,0 +1,159 @@
+LAB - 5 
+
+
+//1)Area of circle and rectangle using abstract class & method Overriding.
+
+Code:
+
+abstract class Shape{ 
+    abstract double area(); 
+} 
+class Circle extends Shape{ 
+      double radius; 
+    Circle(double radius){ 
+        this.radius=radius; 
+            } @Override 
+            double area(){ 
+                return 3.14*radius*radius;            } 
+} 
+class Rectangle extends Shape{ 
+        double l; 
+    double b; 
+    Rectangle(  double l,    double b ){ 
+        this.l=l; 
+        this.b=b; 
+            } 
+            @Override 
+            double area(){ 
+                return l*b; 
+                            }} 
+            class Main{ 
+                public static void main(String[]args){ 
+                    Circle c=new Circle(5); 
+                    System.out.println("Area of circle:" +c.area()); 
+                     Rectangle r =new Rectangle(6,7); 
+                    System.out.println("Area of rectangle:" +r.area()); 
+                } 
+            } 
+
+Output;
+Area of circle:78.5 
+Area of rectangle:42.0 
+
+
+//------------------------
+
+
+ 
+//2)Create a class shape with a method display(). Override this method in both Circle and Rectangle classes . Use the super keyword in the overriden methods to call the parent class display() method before printing shape-specific messages. Wite a main function to show how super works.
+
+Code :
+
+class Shape { 
+    void display() { 
+        System.out.println("This is a shape."); 
+    } 
+} 
+ 
+class Circle extends Shape { 
+    @Override 
+    void display() { 
+        super.display();  
+        System.out.println("This is a circle."); 
+    } 
+} 
+class Rectangle extends Shape { 
+    @Override 
+    void display() { 
+        super.display(); 
+        System.out.println("This is a rectangle."); 
+    } 
+} 
+public class Main { 
+    public static void main(String[] args) { 
+        Shape shape = new Shape(); 
+        Circle circle = new Circle(); 
+        Rectangle rectangle = new Rectangle(); 
+ 
+        System.out.println("Calling display() on Shape:"); 
+        shape.display(); 
+ 
+    System.out.println("\nCalling display() on Circle:"); 
+        circle.display(); 
+ 
+        System.out.println("\nCalling display() on Rectangle:"); 
+        rectangle.display(); 
+    } 
+} 
+
+Output ;
+
+ Calling display() on Shape:
+This is a shape.
+
+Calling display() on Circle:
+This is a shape.
+This is a circle.
+
+Calling display() on Rectangle:
+This is a shape.
+This is a rectangle.
+
+//------------------------
+
+
+ 
+3). Create a class Shape with a method area (). Derive Circle and Rectangle  classes from shape and override the area() method   . In the main function, use the shape reference to point to Circle and Rectangle  objects  and call the area() method. Demonstrate how dynamic binding works by overriding which area() method get called at runtime. 
+ 
+Code: 
+class Shape { 
+    double area() { 
+        System.out.println("Area of shape"); 
+        return 0; 
+    } 
+} 
+ 
+class Circle extends Shape { 
+    double radius; 
+ 
+    Circle(double radius) { 
+        this.radius = radius; 
+    } 
+ 
+    @Override 
+    double area() { 
+        double area = Math.PI * radius * radius; 
+        System.out.println("Area of Circle: " + area); 
+        return area; 
+    } 
+} 
+ 
+class Rectangle extends Shape { 
+    double length, width; 
+ 
+    Rectangle(double length, double width) { 
+        this.length = length; 
+        this.width = width; 
+    } 
+ 
+    @Override 
+    double area() { 
+        double area = length * width; 
+        System.out.println("Area of Rectangle: " + area); 
+        return area; 
+    } 
+} 
+ 
+public class DynamicBindingDemo { 
+    public static void main(String[] args) { 
+        Shape s1 = new Circle(5.0); 
+        s1.area(); 
+ 
+        Shape s2 = new Rectangle(4.0, 6.0); 
+        s2.area();  
+    } 
+} 
+
+Output; 
+Area of Circle: 78.53981633974483 
+Area of Rectangle: 24.0
