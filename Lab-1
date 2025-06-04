@@ -2,7 +2,7 @@ LAB - 1
  
 23BEC7319
 
-1) Reverse the number;
+//1) Reverse the number;
 import java.util.Scanner;
 
 public class ReverseNumber {
@@ -21,9 +21,13 @@ public class ReverseNumber {
     }
 }
 
+Output;
+Enter a number: 12345
+Reversed number: 54321
 
+//–-----------------------
 
-2) Factorial of a number;
+//2) Factorial of a number;
 
 import java.util.Scanner;
 
@@ -42,8 +46,12 @@ public class Factorial {
     }
 }
 
+Output;
+Enter a number: 5
+Factorial: 120
+//-------------
 
-3) Checking palindrome or not;
+//3) Checking palindrome or not;
 
 import java.util.Scanner;
 
@@ -66,8 +74,12 @@ public class PalindromeCheck {
     }
 }
 
+Output;
+Enter a string: madam
+madam is a palindrome.
+//-------------------
 
-4)  Sorting array of numbers;
+//4)  Sorting array of numbers;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -94,7 +106,18 @@ public class SortArray {
 }
 
 
-5)  Counting vowels;
+Output;
+Enter number of elements: 5
+Enter array elements:
+23 12 45 5 19
+
+Sorted array in ascending order:
+5 12 19 23 45
+
+
+//-----------------
+
+//5)  Counting vowels;
 
 import java.util.Scanner;
 
@@ -115,3 +138,8 @@ public class VowelCount {
         System.out.println("Number of vowels: " + count);
     }
 }
+
+
+Output;
+Enter a string: Engineering
+Number of vowels: 4
