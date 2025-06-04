@@ -3,7 +3,7 @@ LAB - 2
 
 23BEC7319
 
-1) Checking palindrome;
+//1) Checking palindrome;
 
 public class Palindrome {
     public static void main(String[] args) {
@@ -19,12 +19,19 @@ public class Palindrome {
     }
 }
 
+Output;
+String str = "SASASAS"
+Is palindrome: true
 
-2) Counting vowels, consonants, digits &  special characters;
+
+//--------------------
+
+
+//2) Counting vowels, consonants, digits &  special characters;
 
 public class CharCount {
     public static void main(String[] args) {
-        String str = "SAshank*@!";
+        String str = "SumanTH116*@!";
         int vowels = 0;
         int consonants = 0; 
         int digits = 0;
@@ -46,12 +53,22 @@ public class CharCount {
     }
 }
 
+Output;
+String str = "SumanTH116*@!";
+Vowels: 2
+Consonants: 5
+Digits: 3
+Special Characters: 3
 
-3) Comparing strings
+
+//-----------------------------
+
+
+//3) Comparing strings
 public class StringCompare {
     public static void main(String[] args) {
-        String str1 = "Sashank";
-        String str2 = "Shashank";
+        String str1 = "Sumanth";
+        String str2 = "SumantH";
 
         if (str1.equals(str2)) {
             System.out.println("Strings are equal (ignoring case)");
@@ -61,13 +78,20 @@ public class StringCompare {
     }
 }
 
+Output;
+String str1 = "Sumanth";
+String str2 = "SumantH";
+Strings are not equal
 
 
-4) First and last occurrence;
+//-----------------------
+
+
+//4) First and last occurrence;
 
 public class CharOcc {
     public static void main(String[] args) {
-        String str = "kadaliiiiiiiii";
+        String str = "kadalii";
         char ch = 'i';
 
         int first = str.indexOf(ch);
@@ -79,10 +103,20 @@ public class CharOcc {
 }
 
 
-5) Reverse the string;
+Output;
+String str = "kadalii";
+char ch = 'i';
+First occurrence: 5
+Last occurrence: 6
+
+
+//-------------------------
+
+
+//5) Reverse the string;
 public class ReverseString {
     public static void main(String[] args) {
-        String str = "ILADAK KNASAS";
+        String str = "Ch Sumanth";
         String reversed = "";
 
         for (int i = str.length() - 1; i >= 0; i--) {
@@ -93,10 +127,19 @@ public class ReverseString {
     }
 }
 
-6) Split the sentence;
+Output;
+String str = "Ch Sumanth";
+Reversed string: htnamuS hC
+
+
+//--------------------
+
+
+
+//6) Split the sentence;
 public class SplitSentence {
     public static void main(String[] args) {
-        String sentence = "HELLO Bhaii logg mera nam hai Sasank. Arigatho!!";
+        String sentence = "Hi My self sumanth";
         String[] words = sentence.split(" ");
 
         for (String word : words) {
@@ -106,14 +149,30 @@ public class SplitSentence {
 }
 
 
-7) Comparing starting and ending with input;
+Output;
+String sentence = "Hi My self sumanth";
+Hi
+My
+self
+sumanth
+
+
+//-----------------
+
+
+//7) Comparing starting and ending with input;
 public class StartEndCheck {
     public static void main(String[] args) {
-        String str = "HELLO BAI";
+        String str = "HELLO world";
         boolean starts = str.startsWith("HELLO");
-        boolean ends = str.endsWith("BAI");
+        boolean ends = str.endsWith("World");
 
         System.out.println("Starts with 'HELLO': " + starts);
-        System.out.println("Ends with 'BAI': " + ends);
+        System.out.println("Ends with 'World': " + ends);
     }
 }
+
+Output;
+String str = "HELLO world";
+Starts with 'HELLO': true
+Ends with 'World': false
