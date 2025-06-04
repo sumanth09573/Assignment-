@@ -1,0 +1,27 @@
+             LAB - 3
+                                23BEC7319
+                                27-05-2025
+
+Question: Split & String methods;
+
+import java.util.Scanner;
+class main{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a string:");
+        String str=sc.nextLine();
+        String []librants=str.split(" "); 
+        System.out.println("Words:");
+        for(String word:librants){
+            System.out.println(word);}
+            System.out.println("upper case:"+str.toUpperCase());
+            System.out.println("lower case:"+str.toLowerCase());
+            System.out.println("length:"+str.length());
+            System.out.println("substring:"+str.substring(2,8));
+            System.out.println("replacement:"+str.replace("VITIAN","SINGLE"));
+           System.out.println("character:"+str.charAt(5));
+           System.out.println("index number"+str.indexOf("V"));
+           System.out.println("boolean has VITIAN:"+str.contains("VITIAN"));
+             
+    }
+}
