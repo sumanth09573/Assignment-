@@ -1,6 +1,6 @@
 public class StartEndCheck {
     public static void main(String[] args) {
-        String str = "HELLO bro my name is Sasank";
+        String str = "HELLO bro my name is Sumanth";
         boolean starts = str.startsWith("HELLO");
         boolean ends = str.endsWith("Broo");
 
