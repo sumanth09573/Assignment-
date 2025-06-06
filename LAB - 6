@@ -1,0 +1,87 @@
+LAB – 6
+23BEC7319
+
+
+1) . Write a code to build a student management system that stores marks of 5 students, Calculate total average. Use Collections.
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+public class Hash {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        HashMap<String, Integer> studentMarks = new HashMap<>();
+        int total = 0;
+        int numberOfStudents = 5;
+        for (int i = 1; i <= numberOfStudents; i++) {
+            System.out.print("Enter student name: ");
+            String name = sc.nextLine();
+            System.out.print("Enter marks of " + name + ": ");
+            int marks = sc.nextInt();
+            sc.nextLine(); 
+            studentMarks.put(name, marks);
+            total += marks;
+                         }
+        double average = (double) total / numberOfStudents;
+        System.out.println("\n--- Student Marks ---");
+        for (Map.Entry<String, Integer> entry : studentMarks.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+        System.out.print("\nTotal:"+total);
+        System.out.println("\nAverage Marks: " + average);
+    }
+}
+OUTPUT;
+Enter student name: A
+Enter marks of A: 55
+Enter student name: B
+Enter marks of B: 
+66
+Enter student name: C
+Enter marks of C: 77
+Enter student name: D
+Enter marks of D: 88
+Enter student name: E
+Enter marks of E: 99
+
+--- Student Marks ---
+A: 55
+B: 66
+C: 77
+D: 88
+E: 99
+
+Total:385
+Average Marks: 77.0
+
+//---------------------------------------------    
+2). Write a java code to perform the String Operations
+Hide Last 4 Digits of a Phone Number
+Hide Middle Part of an Email .
+Replace All Characters Except First and Last.
+
+public class SimpleStringOperations {
+    public static void main(String[] args) {
+        String phone = "9876543210";
+        String email = "example@gmail.com";
+        String word = "Sumanth";
+
+        // 1. Hide last 4 digits of phone number
+        String hiddenPhone = phone.substring(0, phone.length() - 4) + "****";
+        System.out.println("Hidden Phone: " + hiddenPhone);
+
+        // 2. Hide middle part of email
+        int at = email.indexOf('@');
+        String emailHidden = email.charAt(0) + "*****" + email.charAt(at - 1) + email.substring(at);
+        System.out.println("Hidden Email: " + emailHidden);
+
+        // 3. Replace all characters except first and last
+        String middleHidden = word.charAt(0) + "*****" + word.charAt(word.length() - 1);
+        System.out.println("Hidden Word: " + middleHidden);
+    }
+}
+ Output;
+Hidden Phone: 987654****
+Hidden Email: e*****e@gmail.com
+Hidden Word: S*****h
+
+=== Code Execution Successful ===
