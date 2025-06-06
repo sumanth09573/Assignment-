@@ -1,6 +1,6 @@
 public class CharCount {
     public static void main(String[] args) {
-        String str = "SAshank*@!";
+        String str = "SUmanth@!";
         int vowels = 0;
         int consonants = 0; 
         int digits = 0;
