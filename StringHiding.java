@@ -41,9 +41,9 @@ public class StringHiding {
 
 
     public static void main(String[] args) {
-        String phoneNumber = "798-9988-348";
-        String email = "sasankkadaliii@gmail.com";
-        String text = "Sasankkkkadaliii";
+        String phoneNumber = "630269221";
+        String email = "sumanth@gmail.com";
+        String text = "Sumanth";
 
         String maskedPhoneNumber = hideLast4Digits(phoneNumber);
         System.out.println("Original: " + phoneNumber + ", Masked: " + maskedPhoneNumber);
